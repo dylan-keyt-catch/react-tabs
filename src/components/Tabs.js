@@ -63,8 +63,8 @@ export default class Tabs extends Component {
     }
 
     const state = {
-      // Set focus if the change was triggered from the keyboard
-      focus: event.type === 'keydown',
+      // Sets focus to the active tab
+      focus: event.type === 'keydown' || event.type === 'click',
     };
 
     if (mode === MODE_UNCONTROLLED) {
